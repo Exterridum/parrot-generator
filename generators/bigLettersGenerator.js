@@ -1,5 +1,5 @@
 /**
- * Created by matejkolimar on 20/07/2017.
+ * Created by matejkolimar on 20/07/2017 .
  */
 var fs = require('fs');
 var letters = require('./../symbols/bigLetters.js')
