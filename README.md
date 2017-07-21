@@ -22,6 +22,10 @@ With this node module you can generate emoji text like this:
 node app.js --size --text --letter --background
 node app.js -s small -t INLOOP -l :android: -b :ios:
 ```
+Redirect output into console with optional parameter. By default is used text file.
+```bash
+node app.js -s small -t INLOOP -l :android: -b :ios: -o console
+```
 ## Contributing
 
 If you want to contribute then write me at kolimar@inloop.eu

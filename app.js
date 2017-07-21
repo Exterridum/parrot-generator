@@ -31,8 +31,12 @@ const args = yargs
             alias: 'b',
             describe: 'Emoji you want to use for background. e.g -b :ios:',
             string: true
+        },
+        output: {
+            alias: 'o',
+            describe: 'If this optional parameter is used then output is redirected into console. e.g -o console. Otherwise is used text file.',
+            string: true
         }
-
     })
     .help()
     .alias('help', 'h')
@@ -41,10 +45,10 @@ const args = yargs
 var textSize = args.textSize;
 
 if (textSize === 'big') {
-    bigLettersGenerator.generateBigEmojiText(args.text, args.letter, args.background);
+    bigLettersGenerator.generateBigEmojiText(args.text, args.letter, args.background, args.output);
     console.log('Big letters was generated into letters.txt file in project folder');
 } else if (textSize === 'small') {
-    smallLettersGenerator.generateSmallEmojiText(args.text, args.letter, args.background);
+    smallLettersGenerator.generateSmallEmojiText(args.text, args.letter, args.background, args.output);
     console.log('Small letters was generated into letters.txt file in project folder');
 } else {
     console.log('Command not recognized')
