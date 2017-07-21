@@ -7,7 +7,7 @@ var lton = require('letter-to-number');
 var str_replace = require('str_replace');
 
 
-var generateSmallEmojiText = (text, emoji, background) => {
+var generateSmallEmojiText = (text, emoji, background, output) => {
     var emojiText = [];
     for(i = 0;i < text.length; i++) {
         if (text[i].match(/[A-Z ]/i) === null){
@@ -36,10 +36,16 @@ var generateSmallEmojiText = (text, emoji, background) => {
         }
         //In content replace all , with empty space
         fileContent = str_replace(',',' ', data);
-        //Then write this replaced content into file
-        fs.writeFileSync('letters.txt', fileContent, function (err) {
-            if (err) throw err;
-        });
+        if (output === 'console') {
+            //Then write this replaced content into console
+            console.log(fileContent);
+        } else {
+            //Then write this replaced content into file
+            fs.writeFileSync('letters.txt', fileContent, function (err) {
+                if (err) throw err;
+            });
+        }
+
     });
 };
 
