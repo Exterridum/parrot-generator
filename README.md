@@ -1,24 +1,18 @@
 Parrot generator
 =========
 
-With this module you can generate emoji text.
+With this node module you can generate emoji text like this:
+
 ![Alt text](Inloop.png "Optional title")
 
 ## Installation
 
-  npm install parrot-generator --save
+  TODO
 
 ## Usage
 ```javascript
-  var scapegoat = require('scapegoat')
-      escape = scapegoat.escape,
-      unescape = scapegoat.unescape;
-
-  var html = '<h1>Hello World</h1>',
-      escaped = escape(html),
-      unescaped = unescape(escaped);
-
-  console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
+node app.js --size --text --letter --background
+node app.js -s small -t INLOOP -l :android: -b :ios:
 ```
 ## Contributing
 
@@ -26,7 +20,6 @@ If you want to contribute then write me at kolimar@inloop.eu
 
 ## Release History
 
-* 1.0.1 Added readme
 * 1.0.0 Initial release
 
 ## Known issues
