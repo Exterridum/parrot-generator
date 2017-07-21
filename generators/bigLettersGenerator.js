@@ -48,7 +48,7 @@ var readLetter = (letter) => {
 
 var insertLine = (emojiText, length, row) => {
     var abc = [];
-    for(i = 1;i < length; i++) {
+    for(i = 0;i < length; i++) {
         r1 = emojiText[i]["r"+ row.toString()];
         abc.push(r1);
     }
