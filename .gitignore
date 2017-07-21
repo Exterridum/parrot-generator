@@ -1,0 +1,21 @@
+# ignore builds
+*.apk
+*.ipa
+
+.DS_Store
+android/test_servers
+.idea/
+*.png
+.irb-history
+*.pyc
+test_servers
+
+calabash-sandbox
+ios-deploy
+
+# ignore reports
+reports/
+
+# capy ignore
+.capy
+capy_private.yaml
